@@ -1,180 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="../static/semantic/dist/components/menu.css">
-<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-<script src="../static/js/semantic.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<head>
+		<meta charset="utf-8">
+		<title>teste</title>
+	</head>
+	<body>
+		<!-- sessão bg-gray -->
+		<section style="background-color:#F4F6FB;">
+			<!-- navbar -->
+			<nav class="relative select-none lg:flex lg:items-stretch w-full">
+				<div class="flex h-14 ml-10">
+					<img src="../static/img/logo.svg" alt="Summa Logo">
+				</div>
+				<div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+					<div class="flex items-stretch justify-end ml-auto">
+						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Home</a>
+						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Sobre</a>
+						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Funcionalidades</a>
+						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Contato</a>
+						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">FAQ</a>
+						<button type="button" name="button" class="bg-purple-DEFAUT hover:bg-purple-light text-white-DEFAUT font-bold py-2 px-4 border-0 outline-white m-3 rounded">Login</button>
+					</div>
+				</div>
+			</nav><!-- end nav -->
 
-<head>
-  <meta charset="utf-8">
-  <title>teste</title>
-</head>
+<!-- 2 columns -->
 
-<body>
+<div class="grid grid-cols-1 lg:grid-cols-2">
+	<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+		<div class="flex-grow">
+	<h1 class="uppercase text-center font-bold text-opacity-25">Inove a Gestão de Atividades Complementares da sua organização com a Summa</h1>
+	<button class="bg-purple-DEFAUT hover:bg-purple-light center text-white-DEFAUT font-bold py-2 px-4 rounded-full">COMEÇAR</button>
+		</div>
+	</div>
+	<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+		<div class="flex-grow">
+			<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-1.png" alt="">
+		</div>
+	</div>
+</div><!-- end columns -->
+		</section> <!-- end section -->
 
-  <section style="background-color: #F4F6FB;">
-
-    <nav>
-      <div class="ui container">
-        <div class="ui fluid secondary menu">
-          <a class="toc item">
-            <img class="ui small image" src="../static/img/logo.png" href="index.html">
-          </a>
-          <a class="item">Home</a>
-          <a class="item">Sobre</a>
-          <a class="item" href="func.html">Funcionalidades</a>
-          <a class="item">FAQ</a>
-          <div class="right item">
-            <a class="ui purple button">Log in</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-
-    <div class="ui internally grid">
-      <div class="row">
-        <div class="two wide column">
-          <img>
-        </div>
-        <div class="twelve wide column">
-        </div>
-        <div class="two wide column">
-          <img>
-        </div>
-      </div>
-      <div class="row">
-        <div class="two wide column">
-          <img>
-        </div>
-        <div class="twelve wide column">
-          <div class="ui two column very relaxed grid">
-            <div class="relaxed center aligned column intro">
-              <h1 class="ui header">Inove a Gestão de Atividades Complementares da sua organização com a Summa
-              </h1>
-              <button class="ui purple button large">COMEÇAR</button>
-            </div>
-            <div class="column">
-              <div class="ui center aligned container">
-                <img class="ui fluid image" src="../static/img/pg1-1.png">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="two wide column">
-          <img>
-        </div>
-      </div>
-    </div>
-
-
-  </section>
-
-  <section>
-    <div class="ui internally grid">
-      <div class="row about">
-        <div class="fourteen wide column">
-          <div class="ui two column very relaxed grid">
-            <div class="relaxed left aligned column">
-              <h2>Sobre</h2>
-              <p>O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é um
-                processo realizado de forma simples e manual que demanda bastante esforço do responsável por esses
-                cálculos.
-                </br></br>
-                Para mudar esse cenário e agilizar o processo de contabilização e levantamento de atividades
-                extra-curriculares realizadas pelos discentes a Summa foi desenvolvida!
-                </br></br>
-                Confira as funcionalidades da Summa e o que podemos fazer para inovar a gestão de atividades
-                complementares da sua instituição.</p>
-            </div>
-            <div class="column">
-              <div class="ui center aligned container">
-                <img class="ui fluid image" src="../static/img/pg1-2.png" width="100%">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="two wide column">
-          <img>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h1>Funcionalidades</h1>
-    <div class="ui horizontal cards features">
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/prancheta.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Submissão de certificados e declarações de atividades extra-curriculares
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/aproved.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Aprovação e validação de atividade extra-curricular pelo avaliador
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/calendar.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Recomendações de eventos na área de formação do estudante
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ui horizontal cards features">
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/browser.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Exportação de currículo de atividades do estudante
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/load.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Contabilização de horas restantes para atingir a carga horária estimada
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="../static/img/icons/find.svg" class="ui tiny left floated image">
-        </div>
-        <div class="content">
-          <div class="funcionalidade">
-            Dashboard com os dados de progresso dos estudantes
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-</body>
-<script>
-</script>
-
+		<!-- section sobre -->
+		<section>
+			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+					<div class="flex-grow">
+						<h2 class="uppercase text-center font-bold text-opacity-25">Sobre</h2>
+						<p class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-medium">O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é um
+							processo realizado de forma simples e manual que demanda bastante esforço do responsável por esses
+							cálculos.
+							Para mudar esse cenário e agilizar o processo de contabilização e levantamento de atividades
+							extra-curriculares realizadas pelos discentes a Summa foi desenvolvida!
+							Confira as funcionalidades da Summa e o que podemos fazer para inovar a gestão de atividades
+							complementares da sua instituição.
+						</p>
+					</div>
+				</div>
+				<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+					<div class="flex-grow">
+						<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-2.png" >
+					</div>
+				</div>
+			</div><!-- end columns -->
+		</section><!-- end section -->
+		<section>
+			<h1>Funcionalidades</h1>
+			<div class="ui horizontal cards features">
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/prancheta.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Submissão de certificados e declarações de atividades extra-curriculares
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/aproved.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Aprovação e validação de atividade extra-curricular pelo avaliador
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/calendar.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Recomendações de eventos na área de formação do estudante
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui horizontal cards features">
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/browser.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Exportação de currículo de atividades do estudante
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/load.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Contabilização de horas restantes para atingir a carga horária estimada
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="../static/img/icons/find.svg" class="ui tiny left floated image">
+					</div>
+					<div class="content">
+						<div class="funcionalidade">
+							Dashboard com os dados de progresso dos estudantes
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script></script>
 </html>
