@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 	<head>
 		<meta charset="utf-8">
 		<title>teste</title>
 	</head>
 	<body>
 		<!-- sessão bg-gray -->
-		<section style="background-color:#F4F6FB;">
+		<section style="background-color:#F4F6FB;" id="home">
 			<!-- navbar -->
 			<nav class="relative select-none lg:flex lg:items-stretch w-full">
 				<div class="flex h-14 ml-10">
@@ -16,40 +16,41 @@
 				</div>
 				<div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
 					<div class="flex items-stretch justify-end ml-auto">
-						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Home</a>
-						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Sobre</a>
-						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Funcionalidades</a>
+						<a href="#home" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Home</a>
+						<a href="#sobre" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Sobre</a>
+						<a href="#funcionalidades" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Funcionalidades</a>
 						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Contato</a>
 						<a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">FAQ</a>
-						<button type="button" name="button" class="bg-purple-DEFAUT hover:bg-purple-light text-white-DEFAUT font-bold py-2 px-4 border-0 outline-white m-3 rounded">Login</button>
+						<button type="button" name="button" class="bg-purple-500 hover:bg-purple-light text-white font-bold py-2 px-4 border-0 outline-white m-3 rounded">Login</button>
 					</div>
 				</div>
-			</nav><!-- end nav -->
-
-<!-- 2 columns -->
-
-<div class="grid grid-cols-1 lg:grid-cols-2">
-	<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
-		<div class="flex-grow">
-	<h1 class="uppercase text-center font-bold text-opacity-25">Inove a Gestão de Atividades Complementares da sua organização com a Summa</h1>
-	<button class="bg-purple-DEFAUT hover:bg-purple-light center text-white-DEFAUT font-bold py-2 px-4 rounded-full">COMEÇAR</button>
-		</div>
-	</div>
-	<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
-		<div class="flex-grow">
-			<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-1.png" alt="">
-		</div>
-	</div>
-</div><!-- end columns -->
-		</section> <!-- end section -->
-
-		<!-- section sobre -->
-		<section>
+			</nav>
+			<!-- end nav -->
 			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<!-- 2 columns -->
 				<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
 					<div class="flex-grow">
-						<h2 class="uppercase text-center font-bold text-opacity-25">Sobre</h2>
-						<p class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-medium">O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é um
+						<h1 class="uppercase text-center text-gray-700 font-semibold">Inove a Gestão de Atividades Complementares da sua organização com a Summa</h1>
+						<button class="bg-purple-500 hover:bg-purple-100 center text-white font-bold py-2 px-4 rounded-full">COMEÇAR</button>
+					</div>
+				</div>
+				<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+					<div class="flex-grow">
+						<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-1.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- end columns -->
+		</section>
+		<!-- end section -->
+		<!-- section sobre -->
+		<section id="sobre">
+			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<!-- 2 columns -->
+				<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+					<div class="flex-grow">
+						<h2 class="text-left pb-5 font-bold text-3xl">Sobre</h2>
+						<p class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-light">O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é um
 							processo realizado de forma simples e manual que demanda bastante esforço do responsável por esses
 							cálculos.
 							Para mudar esse cenário e agilizar o processo de contabilização e levantamento de atividades
@@ -64,75 +65,118 @@
 						<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-2.png" >
 					</div>
 				</div>
-			</div><!-- end columns -->
-		</section><!-- end section -->
-		<section>
-			<h1>Funcionalidades</h1>
-			<div class="ui horizontal cards features">
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/prancheta.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Submissão de certificados e declarações de atividades extra-curriculares
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/aproved.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Aprovação e validação de atividade extra-curricular pelo avaliador
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/calendar.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Recomendações de eventos na área de formação do estudante
-						</div>
-					</div>
-				</div>
 			</div>
-			<div class="ui horizontal cards features">
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/browser.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Exportação de currículo de atividades do estudante
+			<!-- end columns -->
+		</section>
+		<!-- end section -->
+		<!-- section funcionalidades -->
+		<section id="funcionalidades">
+			<div class="min-h-1/4 bg-purple-200 bg-opacity-50 py-6 flex flex-col justify-center sm:py-12">
+				<h1 class=" p-10 text-left text-gray-600 font-semibold text-3xl">Funcionalidades</h1>
+				<div class="grid lg:grid-cols-3 grid-cols-1 gap-16 px-4 ">
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/prancheta.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Submissão de certificados e declarações de atividades extra-curriculares.</p>
 						</div>
 					</div>
-				</div>
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/load.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Contabilização de horas restantes para atingir a carga horária estimada
+					<!-- end card -->
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/aproved.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Aprovação e validação de atividade extra-curricular pelo avaliador.</p>
 						</div>
 					</div>
-				</div>
-				<div class="card">
-					<div class="image">
-						<img src="../static/img/icons/find.svg" class="ui tiny left floated image">
-					</div>
-					<div class="content">
-						<div class="funcionalidade">
-							Dashboard com os dados de progresso dos estudantes
+					<!-- end card -->
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/calendar.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Recomendações de eventos na área de formação do estudante.</p>
 						</div>
 					</div>
+					<!-- end card -->
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/browser.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Exportação de currículo de atividades do estudante.</p>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/load.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Contabilização de horas restantes para atingir a carga horária estimada.</p>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- card -->
+					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+						<img class="w-24 h-24 object-cover" src="../static/img/icons/find.svg" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Dashboard com os dados de progresso dos estudantes.</p>
+						</div>
+					</div>
+					<!-- end card -->
 				</div>
 			</div>
 		</section>
+		<!-- section contato -->
+		<section id="contato">
+			<div class="min-h-1/2 py-6 flex flex-col justify-center sm:py-12">
+				<div class="grid lg:grid-cols-2 grid-cols-1 gap-16 px-4 items-center">
+					<div class="p-8 m-4">
+						<h1 class="text-left pl-5 text-gray-700 font-semibold text-3xl">Fale Conosco</h1>
+						<h3 class="text-left pl-5 text-gray-700 font-light">Escreva uma mensagem abaixo e envie para nós. Em breve entraremos em contato com você!</h3>
+							<form action="/" method="post" class="p-5">
+									<div class="flex flex-col mb-4">
+											<input class="border py-2 px-3 text-grey-800" type="text" name="nome" placeholder="Nome">
+									</div>
+									<div class="flex flex-col mb-4">
+											<input class="border py-2 px-3 text-grey-800" type="email" name="email" placeholder="Email">
+									</div>
+									<div class="flex flex-col mb-4">
+											<input class="border py-2 px-3 text-grey-800" type="text" name="assunto" placeholder="Assunto">
+									</div>
+									<div class="flex flex-col mb-4">
+											<input class="border py-16 px-3 text-grey-800" type="text" name="mensagem" placeholder="Mensagem">
+									</div>
+									<button class="bg-purple-500 hover:bg-purple-800 text-white text-lg mx-auto p-4 font-semibold rounded" type="submit">Enviar Mensagem</button>
+							</form>
+					</div>
+					<div class="p-8 m-4 items-left">
+						<!-- card -->
+						<div class="flex justify-start cursor-pointer mb-5">
+							<img class="w-24 h-24 object-cover" src="../static/img/icons/localization.svg" alt="" />
+							<div class="flex flex-col justify-center">
+								<p class="text-gray-800 font-semibold ml-3 text-xl">Av. Expedicionário Osvaldo de Almeida Ramos, 280 - Centro, Vassouras - RJ, 27700-000</p>
+							</div>
+						</div><!-- end card -->
+						<!-- card -->
+						<div class="flex justify-start cursor-pointer mb-5">
+							<img class="w-24 h-24 object-cover" src="../static/img/icons/message.svg" alt="" />
+							<div class="flex flex-col justify-center">
+								<p class="text-gray-800 font-semibold ml-3 text-xl">fale@summa.com.br</p>
+							</div>
+						</div><!-- end card -->
+						<!-- card -->
+						<div class="flex justify-start cursor-pointer mb-5">
+							<img class="w-24 h-24 object-cover" src="../static/img/icons/phone.svg" alt="" />
+							<div class="flex flex-col justify-center">
+								<p class="text-gray-800 font-semibold ml-3 text-xl">(24) 99999-9999</p>
+							</div>
+						</div><!-- end card -->
+					</div>
+					</div>
+					</div>
+			<div class="flex justify-center items-center h-screen w-full bg-blue-400">
+
+</div>
+		</section><!-- end section -->
 	</body>
 	<script></script>
 </html>
