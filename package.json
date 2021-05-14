@@ -6,9 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcocheto/summa.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcocheto/summa/issues"
+  },
+  "homepage": "https://github.com/bcocheto/summa#readme",
   "dependencies": {
     "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "^10.2.5",

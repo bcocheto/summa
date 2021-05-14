@@ -13,12 +13,18 @@ colors:{
 	purple:{
 		500: '#855CF8',
 	},
+	white:{
+		DEFAUT: '#FAFAFA',
+	},
 },
+
     extend: {},
   },
+
   variants: {
     extend: {},
   },
+
   plugins: [
 		require('@tailwindcss/forms'),
 	],
