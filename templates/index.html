@@ -1,207 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
-	<head>
-		<meta charset="utf-8">
-		<title>teste</title>
-	</head>
-	<body>
-		<!-- sessão bg-gray -->
-		<section style="background-color:#F4F6FB;" id="home">
-			<!-- navbar -->
-			<nav class="relative select-none lg:flex lg:items-stretch w-full">
-				<div class="flex h-14 ml-10">
-					<img src="../static/img/logo.svg" alt="Summa Logo">
+	<title>Summa | Inovando a Gestão de Atividades Extra-Curriculares</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- sessão bg-gray -->
+	<section style="background-color:#F4F6FB;" id="home">
+		<!-- navbar -->
+		<nav class="relative select-none lg:flex lg:items-stretch w-full">
+			<div class="flex h-14 ml-10">
+				<img src="../static/img/logo.svg" alt="Summa Logo">
+			</div>
+			<div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+				<div class="flex items-stretch justify-end ml-auto">
+					<a href="#home"
+						class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Home</a>
+					<a href="#sobre"
+						class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Sobre</a>
+					<a href="#funcionalidades"
+						class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Funcionalidades</a>
+					<a href="#contato"
+						class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Contato</a>
+					<a href="#faq"
+						class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">FAQ</a>
+					<button type="button" name="button"
+						class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Login</button>
 				</div>
-				<div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
-					<div class="flex items-stretch justify-end ml-auto">
-						<a href="#home" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Home</a>
-						<a href="#sobre" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Sobre</a>
-						<a href="#funcionalidades" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Funcionalidades</a>
-						<a href="#contato" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">Contato</a>
-						<a href="#faq" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-grey no-underline flex items-center hover:bg-blue-300">FAQ</a>
-						<button type="button" name="button" class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Login</button>
-					</div>
-				</div>
-			</nav>
-			<!-- end nav -->
-			<div class="grid grid-cols-1 lg:grid-cols-2">
-				<!-- 2 columns -->
-				<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
-					<div class="flex-grow">
-						<h1 class="uppercase text-center text-gray-700 font-semibold">Inove a Gestão de Atividades Complementares da sua organização com a Summa</h1>
-						<button class="bg-purple-500 hover:bg-purple-800 py-2 px-8 mt-20 rounded outline-none justify-self-end | text-white font-bold">COMEÇAR</button>
-					</div>
-				</div>
-				<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
-					<div class="flex-grow">
-						<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-1.png" alt="">
+			</div>
+		</nav>
+		<!-- end nav -->
+		<div class="grid grid-cols-1 lg:grid-cols-2">
+			<!-- 2 columns -->
+			<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+				<div class="flex-grow">
+					<h1 class="uppercase text-center text-gray-700 font-semibold text-3xl">Inove a Gestão de Atividades
+						Complementares da sua organização com a Summa</h1>
+					<div class="flex justify-center">
+						<a href="#sobre">
+							<button
+								class="bg-purple-500 hover:bg-purple-800 py-3 px-10 mt-20 rounded outline-none  | text-white font-bold">
+								COMEÇAR
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>
-			<!-- end columns -->
-		</section>
-		<!-- end section -->
-		<!-- section sobre -->
-		<section id="sobre">
-			<div class="grid grid-cols-1 lg:grid-cols-2">
-				<!-- 2 columns -->
-				<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
-					<div class="flex-grow justify">
-						<h2 class="text-left pb-5 font-bold text-3xl">Sobre</h2>
-						<p class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-light">O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é um
-							processo realizado de forma simples e manual que demanda bastante esforço do responsável por esses
-							cálculos.
-							Para mudar esse cenário e agilizar o processo de contabilização e levantamento de atividades
-							extra-curriculares realizadas pelos discentes a Summa foi desenvolvida!
-							Confira as funcionalidades da Summa e o que podemos fazer para inovar a gestão de atividades
-							complementares da sua instituição.
-						</p>
-					</div>
-				</div>
-				<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
-					<div class="flex-grow">
-						<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-2.png" >
-					</div>
+			<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+				<div class="flex-grow">
+					<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-1.png" alt="">
 				</div>
 			</div>
-			<!-- end columns -->
-		</section>
-		<!-- end section -->
-		<!-- section funcionalidades -->
-		<section id="funcionalidades">
-			<div class="min-h-1/4 bg-purple-200 bg-opacity-50 py-6 flex flex-col justify-center sm:py-12">
-				<h1 class=" p-10 text-left text-gray-600 font-semibold text-3xl">Funcionalidades</h1>
-				<div class="grid lg:grid-cols-3 grid-cols-1 gap-16 px-4 ">
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/prancheta.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Submissão de certificados e declarações de atividades extra-curriculares.</p>
-						</div>
-					</div>
-					<!-- end card -->
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/aproved.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Aprovação e validação de atividade extra-curricular pelo avaliador.</p>
-						</div>
-					</div>
-					<!-- end card -->
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/calendar.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Recomendações de eventos na área de formação do estudante.</p>
-						</div>
-					</div>
-					<!-- end card -->
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/browser.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Exportação de currículo de atividades do estudante.</p>
-						</div>
-					</div>
-					<!-- end card -->
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/load.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Contabilização de horas restantes para atingir a carga horária estimada.</p>
-						</div>
-					</div>
-					<!-- end card -->
-					<!-- card -->
-					<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
-						<img class="w-24 h-24 object-cover" src="../static/img/icons/find.svg" alt="" />
-						<div class="flex flex-col justify-center">
-							<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Dashboard com os dados de progresso dos estudantes.</p>
-						</div>
-					</div>
-					<!-- end card -->
-				</div>
-			</div>
-		</section>
-		<!-- section contato -->
-		<section id="contato">
-			<div class="min-h-1/2 py-6 flex flex-col justify-center sm:py-12">
-				<div class="grid lg:grid-cols-2 grid-cols-1 gap-16 px-4 items-center">
-					<div class="p-8 m-4">
-						<h1 class="text-left pl-5 text-gray-700 font-semibold text-3xl">Fale Conosco</h1>
-						<h3 class="text-left pl-5 text-gray-700 font-light">Escreva uma mensagem abaixo e envie para nós. Em breve entraremos em contato com você!</h3>
-							<form action="/" method="post" class="p-5">
-									<div class="flex flex-col mb-4">
-											<input class="border py-2 px-3 text-grey-800" type="text" name="nome" placeholder="Nome">
-									</div>
-									<div class="flex flex-col mb-4">
-											<input class="border py-2 px-3 text-grey-800" type="email" name="email" placeholder="Email">
-									</div>
-									<div class="flex flex-col mb-4">
-											<input class="border py-2 px-3 text-grey-800" type="text" name="assunto" placeholder="Assunto">
-									</div>
-									<div class="flex flex-col mb-4">
-											<input class="border py-16 px-3 text-grey-800" type="text" name="mensagem" placeholder="Mensagem">
-									</div>
-									<div class="flex justify-end">
-										<button class="bg-purple-500 hover:bg-purple-800 text-white text-lg mx-auto p-4 px-16 rounded | font-semibold " type="submit">Enviar Mensagem</button>
-
-									</div>
-							</form>
-					</div>
-					<div class="p-8 m-4 items-left">
-						<!-- card -->
-						<div class="flex justify-start cursor-pointer mb-5">
-							<img class="w-24 h-32 object-cover" src="../static/img/icons/localization.png" alt="" />
-							<div class="flex flex-col justify-center">
-								<p class="text-gray-800 font-semibold ml-3 text-xl">Av. Expedicionário Osvaldo de Almeida Ramos, 280 - Centro, Vassouras - RJ, 27700-000</p>
-							</div>
-						</div><!-- end card -->
-						<!-- card -->
-						<div class="flex justify-start cursor-pointer mb-5">
-							<img class="w-24 h-24 object-cover" src="../static/img/icons/message.png" alt="" />
-							<div class="flex flex-col justify-center">
-								<p class="text-gray-800 font-semibold ml-3 text-xl">fale@summa.com.br</p>
-							</div>
-						</div><!-- end card -->
-						<!-- card -->
-						<div class="flex justify-start cursor-pointer mb-5">
-							<img class="w-24 h-24 object-cover" src="../static/img/icons/phone.png" alt="" />
-							<div class="flex flex-col justify-center">
-								<p class="text-gray-800 font-semibold ml-3 text-xl">(24) 99999-9999</p>
-							</div>
-						</div><!-- end card -->
-					</div>
-					</div>
-					</div>
-				</div>
-		</section><!-- end section -->
-		<!-- section FAQ -->
-		<section id="faq">
-
-	<div class="grid rounded-t bg-indigo-200 ml-12 mr-80 grid-rows-5">
-    <h2 class="text-2xl font-bold mt-5 text-gray-800 text-center">FAQ</h2>
-		<div class="grid grid-cols-2 bg-white p-5 rounded-b shadow-lg ">
-<div class="flex-col">
-	<h2 class="text-2xl mb-2 text-gray-800">Como faço para adquirir o sistema Summa?</h2>
-</div>
-<div class="flex-col min-w-3/4">
-	<i class="fas fa-sort-down"></i>
-
-</div>
 		</div>
-</div>
-
-</div>
-	<h1>FAQ</h1>
-
-</div>
+		<!-- end columns -->
+	</section>
+	<!-- end section -->
+	<!-- section sobre -->
+	<section id="sobre">
+		<div class="grid grid-cols-1 lg:grid-cols-2">
+			<!-- 2 columns -->
+			<div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+				<div class="flex-grow justify">
+					<h2 class="text-left pb-5 text-3xl text-gray-600 font-semibold">Sobre</h2>
+					<p
+						class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-light">
+						O somatório de horas realizadas em atividades complementares em instituições de ensino ainda é
+						um processo realizado de forma simples e manual que demanda bastante esforço do responsável por
+						esses cálculos. </br></br>
+						Para mudar esse cenário e agilizar o processo de contabilização e levantamento de atividades
+						extra-curriculares realizadas pelos discentes a Summa foi desenvolvida! </br></br>
+						Confira as funcionalidades da Summa e o que podemos fazer para inovar a gestão de atividades
+						complementares da sua instituição.
+					</p>
+				</div>
+			</div>
+			<div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+				<div class="flex-grow">
+					<img class="block h-auto w-full w-48 flex-none bg-cover h-24" src="../static/img/pg1-2.png">
+				</div>
+			</div>
+		</div>
+		<!-- end columns -->
+	</section>
+	<!-- end section -->
+	<!-- section funcionalidades -->
+	<section id="funcionalidades">
+		<div class="min-h-1/4 py-6 flex flex-col justify-center sm:py-12">
+			<div class="p-8 m-4">
+				<h1 class="text-left pl-5 text-gray-700 font-semibold text-3xl">Funcionalidades</h1>
+			</div>
+			<div class="grid lg:grid-cols-3 grid-cols-1 gap-16 px-10 ">
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/prancheta.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Submissão de certificados e
+							declarações de atividades extra-curriculares.</p>
 					</div>
+				</div>
+				<!-- end card -->
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/aproved.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Aprovação e validação de
+							atividade extra-curricular pelo avaliador.</p>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/calendar.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Recomendações de eventos na área
+							de formação do estudante.</p>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/browser.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Exportação de currículo de
+							atividades do estudante.</p>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/load.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Contabilização de horas restantes
+							para atingir a carga horária estimada.</p>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- card -->
+				<div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+					<img class="w-24 h-24 object-cover" src="../static/img/icons/find.svg" alt="" />
+					<div class="flex flex-col justify-center">
+						<p class="text-gray-500 dark:text-gray-300 font-semibold ml-3">Dashboard com os dados de
+							progresso dos estudantes.</p>
+					</div>
+				</div>
+				<!-- end card -->
+			</div>
+		</div>
+	</section>
+	<!-- section contato -->
+	<section id="contato">
+		<div class="min-h-1/4 py-6 flex flex-col justify-center sm:py-12">
+			<div class="grid lg:grid-cols-2 grid-cols-1 gap-16 px-4 items-center">
+				<div class="p-8 m-4">
+					<h1 class="text-left pl-5 text-gray-700 font-semibold text-3xl">Fale Conosco</h1>
+					<h3 class="text-left pl-5 text-gray-700 font-light">Escreva uma mensagem abaixo e envie para nós. Em
+						breve entraremos em contato com você!</h3>
+					<form action="/" method="post" class="p-5">
+						<div class="flex flex-col mb-4">
+							<input class="border py-2 px-3 text-grey-800" type="text" name="nome" placeholder="Nome">
+						</div>
+						<div class="flex flex-col mb-4">
+							<input class="border py-2 px-3 text-grey-800" type="email" name="email" placeholder="Email">
+						</div>
+						<div class="flex flex-col mb-4">
+							<input class="border py-2 px-3 text-grey-800" type="text" name="assunto"
+								placeholder="Assunto">
+						</div>
+						<div class="flex flex-col mb-4">
+							<input class="border py-16 px-3 text-grey-800" type="text" name="mensagem"
+								placeholder="Mensagem">
+						</div>
+						<div class="flex justify-end">
+							<button
+								class="bg-purple-500 hover:bg-purple-800 text-white text-lg mx-auto p-4 px-16 rounded | font-semibold "
+								type="submit">Enviar Mensagem</button>
+						</div>
+					</form>
+				</div>
+				<div class="p-8 m-4 items-left">
+					<!-- card -->
+					<div class="flex justify-start cursor-pointer mb-5">
+						<img class="w-20 h-20 object-cover" src="../static/img/icons/localization.png" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-800 font-semibold ml-3 text-xl">Av. Expedicionário Osvaldo de Almeida
+								Ramos, 280 - Centro, Vassouras - RJ, 27700-000</p>
+						</div>
+					</div><!-- end card -->
+					<!-- card -->
+					<div class="flex justify-start cursor-pointer mb-5">
+						<img class="w-16 h-16 object-cover" src="../static/img/icons/message.png" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-800 font-semibold ml-3 text-xl">fale@summa.com.br</p>
+						</div>
+					</div><!-- end card -->
+					<!-- card -->
+					<div class="flex justify-start cursor-pointer mb-5">
+						<img class="w-16 h-16 object-cover" src="../static/img/icons/phone.png" alt="" />
+						<div class="flex flex-col justify-center">
+							<p class="text-gray-800 font-semibold ml-3 text-xl">(24) 99999-9999</p>
+						</div>
+					</div><!-- end card -->
+				</div>
+			</div>
+		</div>
+		</div>
+	</section><!-- end section -->
+	<!-- section FAQ -->
+	<section id="faq" class="text-gray-700">
+		<div class="container px-5 py-18 mb-20 mx-auto">
+			<div class="text-center mb-10">
+				<h1 class="text-left pl-5 text-gray-700 font-semibold text-3xl">
+					Perguntas Frequentes
+				</h1>
+				<p class="text-left pl-5 leading-relaxed ">
+					As dúvidas mais comuns sobre o nosso sistema que você pode ter.
+				</p>
+			</div>
+			<div class="flex flex-wrap  sm:mx-auto sm:mb-2 -mx-2">
+				<div class="w-full lg:w-1/2 px-4">
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							Como faço para adquirir o sistema Summa?
+						</summary>
 
-		</section><!-- end section -->
-	</body>
-	<script></script>
+						<span class="px-4 py-2">
+							No primeiro contato, iremos entender a
+							a sua necessidade e como podemos ajudar da melhor maneira.
+							Após isso, iremos dar continuidade ao processo e, realizada a aquisição do sistema, você
+							receberá o
+							acesso ao sistema com domínio personalizado da sua instituição.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
+							O Summa está disponível apenas para Universidades?
+						</summary>
+
+						<span class="px-4 py-2">
+							Não. O Summa também está disponível para escolas técnicas.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							Quais são os custos do Summa?
+						</summary>
+
+						<span class="px-4 py-2">
+							Os custos do nosso sistema são em primeiro momento a aquisição e instalação do software e,
+							após isso, uma assinatura mensal incluindo a manutenção.
+						</span>
+					</details>
+				</div>
+				<div class="w-full lg:w-1/2 px-4 py-2">
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							É possível personalizar o Summa com a minha marca?
+						</summary>
+
+						<span class="px-4 py-2">
+							Sim. É possível personalizar a página de login com nome e logotipo da sua organização. Além
+							disso, o domínio será personalizado com a sua marca.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							O Summa possui integração com outros sistemas?
+						</summary>
+
+						<span class="px-4 py-2">
+							Ainda não. Todavia, em breve adicionaremos possibilidades de integrações de sucesso!
+						</span>
+					</details>
+				</div>
+			</div>
+		</div>
+	</section><!-- end section -->
+	<!-- footer -->
+	<footer class="bg-gray-800 min-h-1/4 py-5 flex flex-col justify-center sm:py-12">
+		<div class="flex">
+			<img src="../static/img/logotipo.svg" alt="Summa Logo" class="p-1 object-cover">
+		</div>
+		<h1 class="text-center m-2 text-white text-lg">Copyright &copy 2021 Summa. Todos os direitos reservados.</h1>
+	</footer>
+	<!--end footer-->
+</body>
+<script></script>
+
 </html>
