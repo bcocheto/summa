@@ -12,10 +12,17 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
 <body>
-	<div class="flex flex-col ...">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
+	<div class="flex gap-y-44">
+	  <div class="flex-1 h-16 bg-blue-200">
+	    <!-- This item will grow or shrink as needed -->
+	  </div>
+	  <div class="flex-shrink-0 h-16 w-32 bg-indigo-500">
+	    <!-- This item will not shrink below its initial size-->
+	  </div>
+	  <div class="flex-1 h-16 bg-blue-200">
+	    <!-- This item will grow or shrink as needed -->
+	  </div>
+	</div>
 </div>
 </body>
 </html>
