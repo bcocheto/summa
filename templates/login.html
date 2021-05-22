@@ -25,10 +25,10 @@
 		    <label class="block mb-2 text-purple-500 font-semibold" for="senha">Senha</label>
 		    <input class="w-full p-4 mb-6 border-b-2 border-white outline-none bg-gray-100 rounded | focus:bg-white focus:border-b-2 focus:border-purple-500" type="password" name="password">
 		  </div>
-		  <div class="flex justify-center">
-		    <input id="submit-button" class="w-1/2 bg-purple-500 hover:bg-purple-800 text-white font-bold py-4 px-2 mb-6 rounded-full items-center justify-center outline-none" type="submit">
-		  </div>
 		</form>
+		  <div class="flex justify-center">
+		    <button id="submit-button" class="w-1/2 bg-purple-500 hover:bg-purple-800 text-white font-bold py-4 px-2 mb-6 rounded-full items-center justify-center outline-none">Entrar</button>
+		  </div>
 		<footer>
 		  <a class="text-purple-500 hover:text-blue-600 text-sm float-left" href="#">Esqueceu a senha?</a>
 		</footer>
@@ -38,7 +38,7 @@
 		$(document).ready(function() {
 
 			$("#submit-button").click(function(){
-				// window.location.href=pagina.html;
+				window.location.href="userpage.html";
 			});
 
 		});
