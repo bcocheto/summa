@@ -21,7 +21,7 @@ module.exports = {
 				500: '#855CF8',
 			},
 			gray: {
-				500: '#3C64B1',
+				500: '#F4F6FB',
 			},
 		},
 		fontSize: {
