@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <title>Categorias | Summa</title>
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="relative select-none lg:flex lg:items-stretch w-full">
+            <div class="flex h-14 ml-10">
+                <img src="../static/img/logo.svg" alt="Summa Logo">
+            </div>
+            <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+                <div class="flex items-stretch justify-end ml-auto">
+                    <button type="button" name="button" id="logout-button"
+                        class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="pb-20">
+        <div class="p-12 ml-7">
+            <a href="home.html"><span class="fa fa-arrow-left text-2xl text-gray-700 pb-8"> Home</span></a>
+            <h1 class="text-gray-700 text-5xl text-center">
+                Categorias
+            </h1>
+        </div>
+        <div class="flex justify-center sm:flex-none">
+            <table class="border-collapse sm\:w-full">
+                <thead>
+                    <tr>
+                        <th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+                            Macroatividades</th>
+                        <th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+                            Descrição</th>
+                        <th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+                            Horas ACC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Macroatividades
+                            </span>
+                            Atividades Culturais e Esportivas na Universidade
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Descrição
+                            </span>
+                            Eventos culturais e esportivos na universidade
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">Horas
+                                ACC</span>
+                            <span class="rounded py-1 px-3 text-xs font-bold">10</span>
+                        </td>
+                    </tr>
+                    <tr
+                        class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Macroatividades
+                            </span>
+                            Cursos Livres
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Descrição
+                            </span>
+                            Cursos oferecidos pelo curso fora da grade curricular
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">Horas
+                                ACC</span>
+                            <span class="rounded py-1 px-3 text-xs font-bold">20</span>
+                        </td>
+                    </tr>
+                    <tr
+                        class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Macroatividades
+                            </span>
+                            Eventos Acadêmicos Científicos
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Descrição
+                            </span>
+                            Eventos oferecidos pela Universidade de Vassouras para incentivar a prática
+                            acadêmico-científica
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">Horas
+                                ACC</span>
+                            <span class="rounded py-1 px-3 text-xs font-bold">5</span>
+                        </td>
+                    </tr>
+                    <tr
+                        class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Macroatividades
+                            </span>
+                            Monitoria
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Descrição
+                            </span>
+                            Alunos monitores de alguma disciplina ou projeto
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">Horas
+                                ACC</span>
+                            <span class="rounded py-1 px-3 text-xs font-bold">50</span>
+                        </td>
+                    </tr>
+                    <tr
+                        class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Macroatividades
+                            </span>
+                            Iniciação Científica
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                                Descrição
+                            </span>
+                            Programas de iniciação científica nas unidades com participação de alunos para prática
+                        </td>
+                        <td
+                            class="w-full lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+                            <span
+                                class="lg:hidden absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold uppercase">Horas
+                                ACC</span>
+                            <span class="rounded py-1 px-3 text-xs font-bold">20</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>

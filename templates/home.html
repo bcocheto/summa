@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <title>Summa</title>
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="relative select-none lg:flex lg:items-stretch w-full">
+            <div class="flex h-14 ml-10">
+                <img src="../static/img/logo.svg" alt="Summa Logo">
+            </div>
+            <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+                <div class="flex items-stretch justify-end ml-auto">
+                    <button type="button" name="button" id="logout-button"
+                        class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="p-10 ml-7">
+            <h1 class="text-3xl text-gray-700">Olá João!</h1>
+            <p class="text-gray-400 text-lg">Escolha a opção para o que deseja fazer</p>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-x-8 lg:gap-y-4 px-12 ml-5">
+            <div class="flex flex-col justify-center pb-2">
+                <button class="px-6 py-6 text-xl font-medium text-center text-white uppercase
+                transition bg-indigo-500 rounded-2xl shadow hover:shadow-lg hover:bg-indigo-600
+                focus:outline-none">
+                    Meu desempenho
+                </button>
+            </div>
+            <div class="flex flex-col justify-center pl-5 pb-2">
+                <button class="px-3 py-6 text-xl font-medium text-center text-white uppercase
+                transition bg-indigo-500 rounded-2xl shadow hover:shadow-lg hover:bg-indigo-600
+                focus:outline-none">
+                    Submeter certificado
+                </button>
+            </div>
+            <div class="flex flex-col justify-center pl-5 pb-2">
+                <button class="px-6 py-6 text-xl font-medium text-center text-white uppercase
+                transition bg-indigo-500 rounded-2xl shadow hover:shadow-lg hover:bg-indigo-600
+                focus:outline-none">
+                    Categorias
+                </button>
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-x-8 lg:gap-y-4 px-12 py-20 ml-5">
+            <div class="flex flex-col justify-center pb-2">
+                <button class="px-6 py-6 text-xl font-medium text-center text-white uppercase
+                transition bg-indigo-500 rounded-2xl shadow hover:shadow-lg hover:bg-indigo-600
+                focus:outline-none">
+                    Recomendações de Conteúdo
+                </button>
+            </div>
+            <div class="flex flex-col justify-center pl-5 pb-2">
+                <button class="px-3 py-6 text-xl font-medium text-center text-white uppercase
+                transition bg-indigo-500 rounded-2xl shadow hover:shadow-lg hover:bg-indigo-600
+                focus:outline-none">
+                    Meu Perfil
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
