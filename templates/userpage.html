@@ -2,62 +2,317 @@
 <html lang="pt-br" dir="ltr">
    <head>
       <meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
          crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
       <title>Summa | Inovando a Gestão de Atividades Extra-Curriculares</title>
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    </head>
    <body>
-
-         <!-- navbar -->
-         <nav class="bg-pink-light relative select-none lg:flex lg:items-stretch w-full">
-            <div class="flex h-14 ml-10">
-               <img src="../static/img/logo.svg" alt="Summa Logo">
+      <!-- navbar -->
+      <nav style="background-color:#F4F6FB;" class=" relative select-none lg:flex lg:items-stretch w-full">
+         <div class="flex h-14 ml-10">
+            <img src="../static/img/logo.svg" alt="Summa Logo">
+         </div>
+         <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+            <div class="flex items-stretch justify-end ml-auto">
+               <button type="button" name="button" id="login-button"
+                  class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Logout</button>
             </div>
-            <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
-               <div class="flex items-stretch justify-end ml-auto">
-
-								 <button class="logoutButton logoutButton--dark">
-							     <svg class="doorway" viewBox="0 0 100 100">
-							       <path d="M93.4 86.3H58.6c-1.9 0-3.4-1.5-3.4-3.4V17.1c0-1.9 1.5-3.4 3.4-3.4h34.8c1.9 0 3.4 1.5 3.4 3.4v65.8c0 1.9-1.5 3.4-3.4 3.4z" />
-							       <path class="bang" d="M40.5 43.7L26.6 31.4l-2.5 6.7zM41.9 50.4l-19.5-4-1.4 6.3zM40 57.4l-17.7 3.9 3.9 5.7z" />
-							     </svg>
-							     <svg class="figure" viewBox="0 0 100 100">
-							       <circle cx="52.1" cy="32.4" r="6.4" />
-							       <path d="M50.7 62.8c-1.2 2.5-3.6 5-7.2 4-3.2-.9-4.9-3.5-4-7.8.7-3.4 3.1-13.8 4.1-15.8 1.7-3.4 1.6-4.6 7-3.7 4.3.7 4.6 2.5 4.3 5.4-.4 3.7-2.8 15.1-4.2 17.9z" />
-							       <g class="arm1">
-							         <path d="M55.5 56.5l-6-9.5c-1-1.5-.6-3.5.9-4.4 1.5-1 3.7-1.1 4.6.4l6.1 10c1 1.5.3 3.5-1.1 4.4-1.5.9-3.5.5-4.5-.9z" />
-							         <path class="wrist1" d="M69.4 59.9L58.1 58c-1.7-.3-2.9-1.9-2.6-3.7.3-1.7 1.9-2.9 3.7-2.6l11.4 1.9c1.7.3 2.9 1.9 2.6 3.7-.4 1.7-2 2.9-3.8 2.6z" />
-							       </g>
-							       <g class="arm2">
-							         <path d="M34.2 43.6L45 40.3c1.7-.6 3.5.3 4 2 .6 1.7-.3 4-2 4.5l-10.8 2.8c-1.7.6-3.5-.3-4-2-.6-1.6.3-3.4 2-4z" />
-							         <path class="wrist2" d="M27.1 56.2L32 45.7c.7-1.6 2.6-2.3 4.2-1.6 1.6.7 2.3 2.6 1.6 4.2L33 58.8c-.7 1.6-2.6 2.3-4.2 1.6-1.7-.7-2.4-2.6-1.7-4.2z" />
-							       </g>
-							       <g class="leg1">
-							         <path d="M52.1 73.2s-7-5.7-7.9-6.5c-.9-.9-1.2-3.5-.1-4.9 1.1-1.4 3.8-1.9 5.2-.9l7.9 7c1.4 1.1 1.7 3.5.7 4.9-1.1 1.4-4.4 1.5-5.8.4z" />
-							         <path class="calf1" d="M52.6 84.4l-1-12.8c-.1-1.9 1.5-3.6 3.5-3.7 2-.1 3.7 1.4 3.8 3.4l1 12.8c.1 1.9-1.5 3.6-3.5 3.7-2 0-3.7-1.5-3.8-3.4z" />
-							       </g>
-							       <g class="leg2">
-							         <path d="M37.8 72.7s1.3-10.2 1.6-11.4 2.4-2.8 4.1-2.6c1.7.2 3.6 2.3 3.4 4l-1.8 11.1c-.2 1.7-1.7 3.3-3.4 3.1-1.8-.2-4.1-2.4-3.9-4.2z" />
-							         <path class="calf2" d="M29.5 82.3l9.6-10.9c1.3-1.4 3.6-1.5 5.1-.1 1.5 1.4.4 4.9-.9 6.3l-8.5 9.6c-1.3 1.4-3.6 1.5-5.1.1-1.4-1.3-1.5-3.5-.2-5z" />
-							       </g>
-							     </svg>
-							     <svg class="door" viewBox="0 0 100 100">
-							       <path d="M93.4 86.3H58.6c-1.9 0-3.4-1.5-3.4-3.4V17.1c0-1.9 1.5-3.4 3.4-3.4h34.8c1.9 0 3.4 1.5 3.4 3.4v65.8c0 1.9-1.5 3.4-3.4 3.4z" />
-							       <circle cx="66" cy="50" r="3.7" />
-							     </svg>
-							     <span class="button-text">Log Out</span>
-							   </button>
+         </div>
+      </nav>
+      <!-- end nav -->
+      <!-- title -->
+      <div class="grid grid-cols-1">
+      <div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+         <div class="flex-grow justify">
+            <h2 class="text-left pb-5 text-3xl text-gray-600 font-semibold">Olá João!</h2>
+            <p class="text-justify normal-case overflow-ellipsis overflow-hidden subpixel-antialiased text-lg font-light">
+               Seja bem vindo!
+            </p>
+         </div>
+      </div>
+      <!-- end title -->
+      <!-- section desempenho -->
+      <section >
+         <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="lg:max-h-1/2 lg:flex items-center p-8 sm:p-12">
+               <div class="flex-grow justify">
+                  <div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+                     <div class="flex flex-col text-left">
+                        <h1 class="text-left ext-gray-500 dark:text-gray-300 font-semibold text-2xl">Horas Complementares Adquiridas</h1>
+                        <p class="text-gray-500 dark:text-gray-300 font-semibold">Somatório total de horas contabilizadas no sistema </p>
+                        <div id="doughnut-chart"></div>
+                     </div>
+                  </div>
                </div>
             </div>
-         </nav>
-         <!-- end nav -->
+            <div class="lg:max-h-1/2 lg:flex lg:items-center p-8 sm:p-12">
+               <div class="flex-grow">
+                  <div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer">
+                     <div class="flex flex-col text-left">
+                        <h1 class="text-left ext-gray-500 dark:text-gray-300 font-semibold text-2xl">Categorias</h1>
+                        <p class="text-gray-500 dark:text-gray-300 font-semibold">Macroatividades realizadas por categoria</p>
+                        <div id="chart"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="lg:flex lg:items-center min-h-3/4 p-8 sm:p-12">
+               <div class="flex-grow">
+                  <div class="bg-white shadow bg-opacity-90 | flex justify-around cursor-pointer h-auto">
+                     <div class="flex flex-col text-left">
+                        <h1 class="text-left ext-gray-500 dark:text-gray-300 font-semibold text-2xl m-3">Histórico de Certificados Aprovados</h1>
+                        <table class="table-fixed" height="250">
+                           <thead>
+                              <tr>
+                                 <th class="w-1/2 ">Atividade</th>
+                                 <th class="w-1/4 ">Categoria</th>
+                                 <th class="w-1/4 ">Data</th>
+                                 <th class="w-1/4 ">Horas</th>
+                              </tr>
+                           </thead>
+                           <tbody class="m-4">
+                              <tr>
+                                 <td>Introdução ao Python</td>
+                                 <td>Cursos Livres</td>
+                                 <td>02 de abril de 2021</td>
+                                 <td class="text-right">8</td>
+                              </tr>
+                              <tr>
+                                 <td>Design Thinking</td>
+                                 <td>Palestras</td>
+                                 <td>07 Dec 2020</td>
+                                 <td class="text-right">3</td>
+                              </tr>
+                              <tr>
+                                 <td>Introdução ao MySQL</td>
+                                 <td>Cursos Livres</td>
+                                 <td>06 Nov 2020</td>
+                                 <td class="text-right">12</td>
+                              </tr>
+                              <tr>
+                                 <td>Startups</td>
+                                 <td>Palestras</td>
+                                 <td>18 Nov 2020</td>
+                                 <td class="text-right">4</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+						<div class="lg:flex lg:items-center min-h-3/4 p-8 sm:p-12">
+							<div class=" py-6 flex flex-col justify-center sm:py-12">
+								 <div class=" m-4">
+										<h1 class="text-left pl-5 text-gray-700 font-semibold text-2xl">Submeter Certificado</h1>
+								 </div>
+								 <div class="grid grid-cols-2 gap-2 px-5  ">
+										<form class="w-full max-w-lg">
+											 <div class="flex flex-wrap mb-6">
+													<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+														 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="certificado">
+														 Título do certificado
+														 </label>
+														 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="certificado" type="text" placeholder="">
+													</div>
+													<div class="w-full md:w-1/4 px-3">
+														 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="carga-horaria">
+														 carga horária
+														 </label>
+														 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="carga-horaria" type="text" placeholder="">
+													</div>
+											 </div>
+											 <div class="flex flex-wrap -mx-3 mb-2">
+													<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+														 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+														 Categoria
+														 </label>
+														 <div class="relative">
+																<select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+																	 <option></option>
+																	 <option></option>
+																	 <option></option>
+																</select>
 
+														 </div>
+													</div>
+													<div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+														 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+														 Zip
+														 </label>
+														 <button class="bg-gray-300 hover:bg-gray-300 text-gray-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+														 <i class="fas fa-cloud-upload-alt"></i>
+														 <span class="ml-1">Upload</span>
+														 </button>
+													</div>
+											 </div>
+											 <button type="submit" name="submit-button" id="submit-button"
+													class="bg-purple-500 hover:bg-purple-800 font-bold py-4 px-40 border-0 m-3 rounded-full outline-none | text-white">Submeter</button>
+										</form>
+								 </div>
+							</div>
+						</div>
+         </div>
       </section>
       <!-- end section -->
+      <!-- section funcionalidades -->
+      <section id="funcionalidades">
+
+				<div class="container mx-auto px-2 sm:px-8">
+				    <div class="py-10">
+				        <div>
+				            <h2 class="text-2xl font-semibold leading-tight text-center">Histórico de envios</h2>
+				        </div>
+				        <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+				            <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+				                <table class="min-w-full leading-normal">
+				                    <thead>
+				                        <tr>
+				                            <th
+				                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+				                                Macroatividades
+				                            </th>
+				                            <th
+				                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+				                                Categoria
+				                            </th>
+				                            <th
+				                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+				                                Arquivo
+				                            </th>
+				                            <th
+				                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+				                                Horas
+				                            </th>
+																		<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Status
+																		</th>
+				                        </tr>
+				                    </thead>
+				                    <tbody>
+				                        <tr>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/4">
+				                                <div class="flex items-center">
+				                                    <div class="ml-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                            Atividades Culturais e Esportivas na Universidade
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/2">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">Atividades de Capacitação Profissional</p>
+				                            </td>
+				                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                    certificado-cmov.pdf
+				                                </p>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-right">
+				                                            30
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-right">
+				                                            Em validação
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                        </tr>
+																<tr>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/4">
+				                                <div class="flex items-center">
+				                                    <div class="ml-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                           CURSOS LIVRES
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/2">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">Cursos Livres</p>
+				                            </td>
+				                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                    certificado-curso-python.pdf
+				                                </p>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-right">
+				                                            8
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-green-400 whitespace-no-wrap text-right">
+				                                            Aprovado
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                        </tr>
+																<tr>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/4">
+				                                <div class="flex items-center">
+				                                    <div class="ml-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                           Eventos Acadêmicos Científicos
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                            <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm w-1/2">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">Palestras Presenciais</p>
+				                            </td>
+				                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+				                                <p class="text-gray-900 whitespace-no-wrap text-center">
+				                                    arquivo,pdf
+				                                </p>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-gray-900 whitespace-no-wrap text-right">
+				                                            4
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+																		<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+				                                <div class="flex items-center float-right">
+				                                    <div class="mr-3">
+				                                        <p class="text-red-500 whitespace-no-wrap text-right">
+				                                            Negado
+				                                        </p>
+				                                    </div>
+				                                </div>
+				                            </td>
+				                        </tr>
+				                    </tbody>
+				                </table>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+      </section>
       <!-- footer -->
       <footer class="bg-gray-800 min-h-1/4 py-5 flex flex-col justify-center sm:py-12">
          <div class="flex">
@@ -67,145 +322,132 @@
       </footer>
       <!--end footer-->
    </body>
-	 <script type="text/javascript">
-	 document.querySelectorAll('.logoutButton').forEach(button => {
- button.state = 'default'
+   <script>
+      function graphOne(){
+      	var options = {
+      	  chart: {
+      	    height: 380,
+      	    type: "radialBar"
+      	  },
 
- // function to transition a button from one state to the next
- let updateButtonState = (button, state) => {
-	 if (logoutButtonStates[state]) {
-		 button.state = state
-		 for (let key in logoutButtonStates[state]) {
-			 button.style.setProperty(key, logoutButtonStates[state][key])
-		 }
-	 }
- }
+      	  series: [22.4],
+      	  plotOptions: {
+      	    radialBar: {
+      	      hollow: {
+      	        margin: 15,
+      	        size: "60%",
+      	      },
 
- // mouse hover listeners on button
- button.addEventListener('mouseenter', () => {
-	 if (button.state === 'default') {
-		 updateButtonState(button, 'hover')
-	 }
- })
- button.addEventListener('mouseleave', () => {
-	 if (button.state === 'hover') {
-		 updateButtonState(button, 'default')
-	 }
- })
+      	      dataLabels: {
+      	        showOn: "always",
+      	        name: {
+      	          offsetY: -10,
+      	          show: true,
+      	          color: "#888",
+      	          fontSize: "13px"
+      	        },
+      	        value: {
+      	          color: "#111",
+      	          fontSize: "30px",
+      	          show: true
+      	        },
 
- // click listener on button
- button.addEventListener('click', () => {
-	 if (button.state === 'default' || button.state === 'hover') {
-		 button.classList.add('clicked')
-		 updateButtonState(button, 'walking1')
-		 setTimeout(() => {
-			 button.classList.add('door-slammed')
-			 updateButtonState(button, 'walking2')
-			 setTimeout(() => {
-				 button.classList.add('falling')
-				 updateButtonState(button, 'falling1')
-				 setTimeout(() => {
-					 updateButtonState(button, 'falling2')
-					 setTimeout(() => {
-						 updateButtonState(button, 'falling3')
-						 setTimeout(() => {
-							 button.classList.remove('clicked')
-							 button.classList.remove('door-slammed')
-							 button.classList.remove('falling')
-							 updateButtonState(button, 'default')
-						 }, 1000)
-					 }, logoutButtonStates['falling2']['--walking-duration'])
-				 }, logoutButtonStates['falling1']['--walking-duration'])
-			 }, logoutButtonStates['walking2']['--figure-duration'])
-		 }, logoutButtonStates['walking1']['--figure-duration'])
-	 }
- })
-})
+      	      }
+      	    }
+      	  },
 
-const logoutButtonStates = {
- 'default': {
-	 '--figure-duration': '100',
-	 '--transform-figure': 'none',
-	 '--walking-duration': '100',
-	 '--transform-arm1': 'none',
-	 '--transform-wrist1': 'none',
-	 '--transform-arm2': 'none',
-	 '--transform-wrist2': 'none',
-	 '--transform-leg1': 'none',
-	 '--transform-calf1': 'none',
-	 '--transform-leg2': 'none',
-	 '--transform-calf2': 'none'
- },
- 'hover': {
-	 '--figure-duration': '100',
-	 '--transform-figure': 'translateX(1.5px)',
-	 '--walking-duration': '100',
-	 '--transform-arm1': 'rotate(-5deg)',
-	 '--transform-wrist1': 'rotate(-15deg)',
-	 '--transform-arm2': 'rotate(5deg)',
-	 '--transform-wrist2': 'rotate(6deg)',
-	 '--transform-leg1': 'rotate(-10deg)',
-	 '--transform-calf1': 'rotate(5deg)',
-	 '--transform-leg2': 'rotate(20deg)',
-	 '--transform-calf2': 'rotate(-20deg)'
- },
- 'walking1': {
-	 '--figure-duration': '300',
-	 '--transform-figure': 'translateX(11px)',
-	 '--walking-duration': '300',
-	 '--transform-arm1': 'translateX(-4px) translateY(-2px) rotate(120deg)',
-	 '--transform-wrist1': 'rotate(-5deg)',
-	 '--transform-arm2': 'translateX(4px) rotate(-110deg)',
-	 '--transform-wrist2': 'rotate(-5deg)',
-	 '--transform-leg1': 'translateX(-3px) rotate(80deg)',
-	 '--transform-calf1': 'rotate(-30deg)',
-	 '--transform-leg2': 'translateX(4px) rotate(-60deg)',
-	 '--transform-calf2': 'rotate(20deg)'
- },
- 'walking2': {
-	 '--figure-duration': '400',
-	 '--transform-figure': 'translateX(17px)',
-	 '--walking-duration': '300',
-	 '--transform-arm1': 'rotate(60deg)',
-	 '--transform-wrist1': 'rotate(-15deg)',
-	 '--transform-arm2': 'rotate(-45deg)',
-	 '--transform-wrist2': 'rotate(6deg)',
-	 '--transform-leg1': 'rotate(-5deg)',
-	 '--transform-calf1': 'rotate(10deg)',
-	 '--transform-leg2': 'rotate(10deg)',
-	 '--transform-calf2': 'rotate(-20deg)'
- },
- 'falling1': {
-	 '--figure-duration': '1600',
-	 '--walking-duration': '400',
-	 '--transform-arm1': 'rotate(-60deg)',
-	 '--transform-wrist1': 'none',
-	 '--transform-arm2': 'rotate(30deg)',
-	 '--transform-wrist2': 'rotate(120deg)',
-	 '--transform-leg1': 'rotate(-30deg)',
-	 '--transform-calf1': 'rotate(-20deg)',
-	 '--transform-leg2': 'rotate(20deg)'
- },
- 'falling2': {
-	 '--walking-duration': '300',
-	 '--transform-arm1': 'rotate(-100deg)',
-	 '--transform-arm2': 'rotate(-60deg)',
-	 '--transform-wrist2': 'rotate(60deg)',
-	 '--transform-leg1': 'rotate(80deg)',
-	 '--transform-calf1': 'rotate(20deg)',
-	 '--transform-leg2': 'rotate(-60deg)'
- },
- 'falling3': {
-	 '--walking-duration': '500',
-	 '--transform-arm1': 'rotate(-30deg)',
-	 '--transform-wrist1': 'rotate(40deg)',
-	 '--transform-arm2': 'rotate(50deg)',
-	 '--transform-wrist2': 'none',
-	 '--transform-leg1': 'rotate(-30deg)',
-	 '--transform-leg2': 'rotate(20deg)',
-	 '--transform-calf2': 'none'
- }
-}
+      	  stroke: {
+      	    lineCap: "round",
+      	  },
+      	  labels: ["Completo"]
+      	};
 
-	 </script>
+      	var chart = new ApexCharts(document.querySelector("#doughnut-chart"), options);
+
+      	chart.render();
+
+      }
+
+
+      function graphTwo(){
+
+      	var options = {
+      	series: [{
+      	data: [400, 430, 448, 470, 540, 580]
+      }],
+      	chart: {
+      	type: 'bar',
+      	height: 350
+      },
+      plotOptions: {
+      	bar: {
+      		barHeight: '100%',
+      		distributed: true,
+      		horizontal: true,
+      		dataLabels: {
+      			position: 'bottom'
+      		},
+      	}
+      },
+      colors: ['#855CF8', '#9D7DF9', '#B197FB', '#BBA4FB', '#C5B1FC', '#CEBEFC'
+      ],
+      dataLabels: {
+      	enabled: true,
+      	textAnchor: 'start',
+      	style: {
+      		colors: ['#fff']
+      	},
+      	formatter: function (val, opt) {
+      		return opt.w.globals.labels[opt.dataPointIndex]
+      	},
+      	offsetX: 0,
+      	dropShadow: {
+      		enabled: false
+      	}
+      },
+      stroke: {
+      	width: 1,
+      	colors: ['#fff']
+      },
+      xaxis: {
+      	categories: ['Palestras Presenciais','Cursos Livres','Avaliação CPA','Eventos Acadêmicos','Mentoria','Representante de Turma'
+      	],
+      	labels:{
+      		show: false
+      	},
+      },
+      yaxis: {
+      	labels: {
+      		show: false
+      	}
+      },
+      tooltip: {
+      	theme: 'dark',
+      	x: {
+      		show: false
+      	},
+      	y: {
+      		title: {
+      			formatter: function () {
+      				return ''
+      			}
+      		}
+      	}
+      }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+
+
+      }
+
+      	 $(document).ready(function() {
+      	 	graphOne();
+      		graphTwo();
+      	 });
+
+
+
+   </script>
 </html>
