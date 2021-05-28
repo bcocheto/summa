@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous" />
+		<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+		<title>Summa | Inovando a Gestão de Atividades Extra-Curriculares</title>
+	<body>
+		<!-- navbar -->
+		<nav class="relative select-none bg-gray-100 lg:flex lg:items-stretch w-full">
+			<div class="flex h-14 ml-10">
+				<img src="../static/img/logo.svg" alt="Summa Logo">
+			</div>
+			<div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow mr-10">
+				<div class="flex items-stretch justify-end ml-auto">
+					<button type="button" name="button" id="logout-button"
+						class="bg-purple-500 hover:bg-purple-800 font-bold py-2 px-4 border-0 m-3 rounded outline-none | text-white">Logout</button>
+				</div>
+			</div>
+		</nav>
+		<!-- end nav -->
+		<!-- title -->
+		<div class="grid grid-cols-1">
+		<div class=" w-full lg:max-w-full lg:flex p-4 sm:p-4">
+			<div class="ml-5 border-r min-w-full p-4 flex flex-col justify-between">
+				<div class="mb-2">
+					<div class="text-gray-900 font-bold text-3xl mb-2">Olá Maria</div>
+				</div>
+				<div class="grid lg:grid-cols-2 grid-cols-1 gap-16">
+					<div class="items-center w-full">
+						<p class="text-gray-500 text-base text-xl">Escolha a seguir uma opção para o que deseja fazer </p>
+					</div>
+					<div class="md:w-1/2 w-full">
+						<select class="w-full border-2 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="curso">
+							<option>Engenharia de Software</option>
+							<option>Engenharia Química</option>
+							<option>Engenharia Elétricas</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end title -->
+		<!-- section funcionalidades -->
+		<section id="historico">
+			<div class="min-h-1/4 flex flex-col justify-center">
+				<div class="p-8 m-4">
+					<h1 class="text-center text-gray-700 font-semibold text-4xl">Histórico de Avaliações</h1>
+				</div>
+				<div class="flex flex-wrap justify-center sm:flex-none m-6">
+					<h1 class="text-gray-700  text-2xl">Submissões pendentes</h1>
+					<table class="border-collapse sm:w-full">
+						<thead>
+							<tr>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Macroatividades
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Categoria
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Arquivo
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Horas
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Status
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+								<td class="w-full lg:w-auto pt-4 p-3 text-gray-800 text-left border-b block lg:table-cell relative lg:static">
+									Atividades Culturais e Esportivas na Universidade
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									Atividades de Capacitação Profissional
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									certificado-cmov.pdf
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									30
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									Em validação
+								</td>
+								<td  class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static"><i class="far fa-eye"></i>Vizualizar</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex flex-wrap justify-center sm:flex-none m-6">
+					<h1 class="text-gray-700  text-2xl">Submissões Aprovadas</h1>
+					<table class="border-collapse sm:w-full">
+						<thead>
+							<tr>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Macroatividades
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Categoria
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Arquivo
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Horas
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Status
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+								<td class="w-full lg:w-auto pt-4 p-3 text-gray-800 text-left border-b block lg:table-cell relative lg:static">
+								Cursos Livres
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									Cursos Livres
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									certificado-curso-python.pdf
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									8
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-green-400 text-center border-b text-center block lg:table-cell relative lg:static">
+									Aprovado
+								</td>
+								<td  class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static"><i class="far fa-eye"></i>Vizualizar</td>
+							</tr>
+							<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+								<td class="w-full lg:w-auto pt-4 p-3 text-gray-800 text-left border-b block lg:table-cell relative lg:static">
+Monitoria								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+Palestras								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+designthinking.pdf								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									3
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-green-400 text-center border-b text-center block lg:table-cell relative lg:static">
+									Aprovado
+								</td>
+								<td  class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static"><i class="far fa-eye"></i>Vizualizar</td>
+							</tr>
+							<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+								<td class="w-full lg:w-auto pt-4 p-3 text-gray-800 text-left border-b block lg:table-cell relative lg:static">
+									Iniciação Científica
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									Cursos Livres
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									certificado-mqsql.pdf
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									12
+								</td>
+								<td class="min-w-1/2 lg:w-auto pt-8 p-3 text-green-400 text-center border-b text-center block lg:table-cell relative lg:static">
+									Aprovado
+								</td>
+								<td  class="min-w-1/2 lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static"><i class="far fa-eye"></i>Vizualizar</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex flex-wrap justify-center sm:flex-none m-6">
+					<h1 class="text-gray-700  text-2xl">Submissões não aprovadas</h1>
+					<table class="border-collapse sm:w-full">
+						<thead>
+							<tr>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Macroatividades
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Categoria
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Arquivo
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Horas
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell">
+									Status
+								</th>
+								<th class="p-3 font-bold uppercase text-gray-600 hidden lg:table-cell"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+								<td class="w-full lg:w-auto pt-4 p-3 text-gray-800 text-left border-b block lg:table-cell relative lg:static">
+									Campeonato de CSGO
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									Atividades de Capacitação Profissional
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									certificado-csgo.pdf
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static">
+									200
+								</td>
+								<td class=" lg:w-auto pt-8 p-3 text-red-400 text-center border-b text-center block lg:table-cell relative lg:static">
+									Recusado
+								</td>
+								<td  class=" lg:w-auto pt-8 p-3 text-gray-800 text-center border-b text-center block lg:table-cell relative lg:static"><i class="far fa-eye"></i>Vizualizar</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- footer -->
+		<footer class="bg-gray-800 min-h-1/4 py-5 flex flex-col justify-center sm:py-12">
+			<div class="flex">
+				<img src="../static/img/logotipo.svg" alt="Summa Logo" class="p-1 object-cover">
+			</div>
+			<h1 class="text-center m-2 text-white text-lg">Copyright &copy 2021 Summa. Todos os direitos reservados.</h1>
+		</footer>
+		<!--end footer-->
+	</body>
+</html>
